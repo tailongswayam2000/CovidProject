@@ -18,7 +18,12 @@ app.get("/plasma", function(req,res){
 app.get("/plasmaRegistration", function(req,res){
   res.render("plasmaRegistration", {});
 })
-
+app.get("/plasmaDataInput", function(req,res){
+  res.render("plasmaDataInput", {});
+})
+app.get("/contactUs", function(req,res){
+  res.render("contactUs", {});
+})
 app.listen(3000, function() {
   console.log("Server started on port 3000");
 });

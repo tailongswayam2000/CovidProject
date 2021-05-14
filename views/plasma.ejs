@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs') -%>
+<div class="plasma-body">
+  <h1 class="plasma-heading">Plasma</h1>
+  <p class="plasma-content">
+     Urgent need of plasma for a patient? <br> Click below to find plasma donors nearby you.
+  </p>
+  <form action="/plasmaDataInput">
+    <button type="submit" class="btn btn-outline-primary btn-lg  plasma-buttons">GET DONORS LIST</button>
+  </form>
+  <p class="plasma-content">
+     Recovered from COVID-19 and willing to donate plasma? <br> Click below to register yourself as a donor and help save lives.
+  </p>
+  <form action="/plasmaRegistration">
+    <button type="submit" class="btn btn-outline-primary btn-lg  plasma-buttons">REGISTER AS A DONOR</button>
+  </form>
+
+</div>
+
+<%- include('partials/footer.ejs') -%>

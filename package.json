@@ -1,7 +1,7 @@
 {
   "name": "covid-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "web development project made by swayam and nikhil",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,5 +13,13 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "mongoose": "^5.12.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tailongswayam2000/CovidProject.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tailongswayam2000/CovidProject/issues"
+  },
+  "homepage": "https://github.com/tailongswayam2000/CovidProject#readme"
 }

@@ -1,0 +1,125 @@
+<%- include('partials/header.ejs') -%>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="generator" content="Hugo 0.83.1">
+<link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+<link href="form-validation.css" rel="stylesheet">
+
+
+<body class="bg-light">
+  <div class="container form-full">
+    <main>
+      <div class="g-5">
+        <div>
+          <h4 class="mb-3">Donor Registration</h4>
+          <hr class="my-4">
+          <form class="needs-validation" novalidate>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">First name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required autocomplete="off">
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="lastName" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="" value="" required autocomplete="off">
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com" required autocomplete="off">
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="Age" class="form-label">Age</label>
+                <input type="Age" class="form-control" id="Age" placeholder="18" required autocomplete="off">
+                <div class="invalid-feedback">
+                  Please enter your correct Age.
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="covid-recovery-date" class="form-label">Covid Recovery Date</label>
+                <input type="date" class="form-control" id="covid-recovery-date" placeholder="18" required autocomplete="off">
+                <div class="invalid-feedback">
+                  Please enter correct Date.
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="mobilenumber" class="form-label">Mobile number</label>
+                <input type="PhoneNo" class="form-control" id="mobilenumber" placeholder="Mobile number" required autocomplete="off">
+                <div class="invalid-feedback">
+                  Phone number required.
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="blood-group" class="form-label">Blood Group</label>
+                <select class="form-select" id="blood-group" required autocomplete="off">
+                  <option>A+</option>
+                  <option>A-</option>
+                  <option>B+</option>
+                  <option>B-</option>
+                  <option>O+</option>
+                  <option>O-</option>
+                  <option>AB+</option>
+                  <option>AB-</option>
+                  <option>Dont know</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid blood group.
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="City" class="form-label">City</label>
+                <input type="text" class="form-control" id="city" placeholder="City" required autocomplete="off">
+                <div class="invalid-feedback">
+                  City required.
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="state" class="form-label">State</label>
+                <select class="form-select" id="state" required autocomplete="off">
+                  <option value="">Choose...</option>
+                  <option>Delhi</option>
+                  <option>Telangana</option>
+                  <option>Rajasthan</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+
+            </div>
+
+
+
+            <button class="w-100 btn btn-lg plasmaRegistrationSubmitButton" type="submit">Register</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+  <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+  <script src="form-validation.js"></script>
+</body>
+
+</html>
+
+<%- include('partials/footer.ejs') -%>

@@ -1,12 +1,32 @@
+
 .page-container {
   min-height: 80vh;
-  background-color: #fbeeca;
-  padding: 40px 0 0 0;
+  font-family: "Montserrat";
+}
+/*header*/
+.navbar {
+  padding: 20px;
+  background-color: #28527a;
+  font-family: "Montserrat";
 }
 
+.navbar-brand {
+  font-weight: 600;
+font-size: 1.75rem;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-item {
+  margin: 0 2.5rem 0 2.5rem;
+}
+
+
 .footer {
-  /* position: absolute; */
   padding: 20px 20px 10px 20px;
+  text-align: center;
   background-color: #28527a;
   color: white;
   width: 100%;
@@ -15,10 +35,11 @@
 .footer-links {
   text-decoration: none;
   color: #7777ff;
+  font-size: 1.25rem;
 }
 
 .footer-img {
-  margin: 15px 0 0 35%;
+  margin: 5%;
 }
 
 .reach {
@@ -39,39 +60,52 @@
   .footer-contact {
     margin-top: 20px;
   }
-
-
 }
 
 /* home.ejs */
-.navbar {
-  padding: 20px;
-  background-color: #fbeeca;
-}
-
-.navbar-brand {
-  font-weight: 600;
-}
-
-.navbar-nav {
-  margin-left: auto;
-}
-
-.nav-item {
-  margin: 0 2.5rem 0 2.5rem;
-}
 
 .banner {
-  background-color: #fbeeca;
-  /* padding: 20px; */
   margin: 0;
 }
 
-.doctor-img-div {
+.banner-tagline{
+  margin: -10px 0 20px 0;
+  font-weight: 500;
+  font-size: 1.35rem;
+  color: #18426a;
+}
+
+.banner-down-text{
+  font-weight: 500;
+}
+
+.banner-down-text-line{
+  margin: 0.5rem  0;
+}
+
+.top{
+  color: #28527a;
+  font-weight: 400;
+}
+
+.top-h1{
+  margin-top: 40px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #18426a;
+}
+
+.donate-blood{
+  color: #ff4c68;
+
+}
+
+.covid-img-div {
   padding: 0;
 }
 
-.doctor-img{
+.covid-img{
   width: 100%;
   right: 5%;
   margin-top: 30px;
@@ -102,25 +136,33 @@
 
 /* plasma.ejs */
 .plasma-body {
-  padding: 30px;
+  padding: 50px;
   text-align: center;
+color: #28527a;
+
 }
 
 .plasma-content {
-  text-align: justify;
+  text-align: center;
   width: 65vw;
-  margin: 20px auto 20px auto;
+  margin: 30px auto 20px auto;
+  font-weight: 500;
 }
 
 .plasma-buttons {
   position: relative;
   padding: 20px;
-  margin: 20px auto 20px auto;
+  margin: 10px auto 20px auto;
   width: 65vw;
-  border-color: #28527a;
+  border-color:#f4d160;
   color: #28527a;
+  font-weight: 500;
+  background-color: #f4d160;
 }
 
+.plasma-heading{
+  font-weight: 600;
+}
 .plasma-buttons:hover {
   background-color: #28527a;
   border-color: #28527a;
@@ -129,14 +171,79 @@
 
 /* plasmaregistration.ejs */
 .plasmaRegistrationSubmitButton {
-  margin-top: 40px;
+  margin-top: 60px;
   margin-bottom: 100px;
-  border-color: #28527a;
+  border-color: #f4d160;
   color: #28527a;
+  font-weight: 500;
+  background-color: #f4d160;
+}
+.mb-3{
+  font-weight: 600;
 }
 
+.form-label{
+  font-weight: 500;
+}
+.form-full{
+  padding-top: 50px;
+}
 .plasmaRegistrationSubmitButton:hover {
   background-color: #28527a;
   border-color: #28527a;
   color: #fff;
+}
+
+/*plasmaDataInput.ejs*/
+.input-plasma{
+  text-align: center;
+  width: 50%;
+  margin:4rem auto;
+  color: #28527a;
+  font-weight: 400;
+}
+
+.input-data{
+  font-size: 1.25rem;
+}
+.state-choose{
+  padding-top: 40px;
+  padding-bottom: 8px;
+  font-weight: 500;
+}
+#state-input{
+  width: 50%;
+  margin: 15px auto;
+}
+
+.plasma-input-buttons{
+  position: relative;
+  padding: 20px;
+  margin: 30px auto 20px auto;
+  width: 50vw;
+  border-color:#f4d160;
+  color: #28527a;
+  font-weight: 500;
+  background-color: #f4d160;
+}
+
+.plasma-input-buttons:hover {
+  background-color: #28527a;
+  border-color: #28527a;
+  color: #fff;
+}
+
+
+/*contactUs.ejs*/
+.contacts{
+  text-align: center;
+}
+
+.contact-div{
+  padding-top: 45px;
+}
+
+.contact-content{
+  margin:20px auto;
+  width: 50%;
 }

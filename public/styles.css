@@ -178,6 +178,14 @@ color: #28527a;
   font-weight: 500;
   background-color: #f4d160;
 }
+
+.form-box{
+  padding: 40px;
+  background-color: #e3e3e3;
+  margin: 10px 0 50px 0;
+  border-radius: 30px;
+}
+
 .mb-3{
   font-weight: 600;
 }
@@ -235,15 +243,37 @@ color: #28527a;
 
 
 /*contactUs.ejs*/
-.contacts{
+
+.contact-page{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.contact-heading{
+  font-weight: 600;
+  text-align: center;
+  color: #2852aa;
+  margin: 3rem 0 1.5rem 0;
+}
+
+.image-div{
   text-align: center;
 }
 
-.contact-div{
-  padding-top: 45px;
+.lead{
+  font-weight: 400;
 }
 
-.contact-content{
-  margin:20px auto;
-  width: 50%;
+.person-img{
+  border-radius: 50px;
+  border-color: #28527a;
+  border-style: solid;
+  border-width: medium;
+  margin-bottom: 10px;
+  width: 60%;
+}
+
+.contact-icon{
+  margin: 0 5px;
+  color: #2852aa;
 }

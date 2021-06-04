@@ -1,0 +1,66 @@
+<%- include('partials/header.ejs') -%>
+<%if(donorData.length===0){%>
+<div class="no-donors">
+  <h1 class="no-donors-heading">Sorry, We currently do not have any donors in <%=stateReqd%>. </h1>
+  <h1 class="no-donors-text">Please try searching in nearby states.</h1>
+  <form action="/plasmaDataInput">
+    <button class="btn btn-lg btn-danger" type="submit" name="button">Search Again</button>
+  </form>
+</div>
+
+<%}else{%>
+
+<table class="table donor-table">
+  <thead>
+    <tr>
+      <th scope="col" class="donor-col-title">ID</th>
+      <th scope="col" class="donor-col-title">Name</th>
+      <th scope="col" class="donor-col-title">City</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <%for(let i=0; i<donorData.length; i++){%>
+    <tr class="table-row-for-hover">
+      <th class="table-text" scope="row"><%=i+1%></th>
+      <td class="table-text" colspace="2">
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <h4 class="panel-list">
+              <a class="donor-name" data-toggle="collapse" data-parent="#accordion" href="#collapse<%=i+1%>">
+                <%=donorData[i].firstName +" "+ donorData[i].lastName%></a>
+            </h4>
+            <div id="collapse<%=i+1%>" class="panel-collapse collapse in">
+              <div class="panel-body card row">
+                <div class="col-lg-12  row">
+                  <div class="col-lg-3 card-field">Contact number:</div><div class=" col-lg-9"> <%=donorData[i].mobileNumber%></div>
+                </div>
+                <div class="col-lg-12 row">
+                  <div class="col-lg-3 card-field">Email:</div><div class=" col-lg-9"> <%=donorData[i].email%></div>
+                </div>
+                <div class="col-lg-12 row">
+                  <div class="col-lg-3 card-field">Age:</div><div class=" col-lg-9"> <%=donorData[i].age%></div>
+                </div>
+                <div class="col-lg-12  row">
+                  <div class="col-lg-3 card-field">Blood group:</div><div class="col-lg-9"> <%=donorData[i].bloodGroup%></div>
+                </div>
+                <div class="col-lg-12 row">
+                  <div class="col-lg-3 card-field">Gender:</div><div class=" col-lg-9"> <%=donorData[i].gender%></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td class="table-text"><%=donorData[i].city%></td>
+    </tr>
+    <% }%>
+  </tbody>
+</table>
+
+
+
+
+
+<%}%>
+<%- include('partials/footer.ejs') -%>

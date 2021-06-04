@@ -1,0 +1,25 @@
+<%- include('partials/header.ejs') -%>
+<div class="input-plasma">
+
+
+  <p class="input-data">
+    Select the state you want to find donors in.
+    <br>
+    You will recieve a list of information of registered donors in all the cities across your state.
+  </p>
+  <form action="/Donor" method="POST">
+    <div class="states">
+      <h1 for="state-input" class="state-choose">Choose your State</h1>
+      <select class="form-select" id="state-input" required name="stateRequired">
+      <%  for(let i=0; i<stateArray.length; i++){ %>
+          <option value="<%=stateArray[i]%>"><%=stateArray[i]%></option>
+        <%}%>
+      </select>
+      <div class="invalid-feedback">
+        Please provide a valid state.
+      </div>
+    </div>
+    <button type="submit" class="btn btn-outline-primary btn-lg  plasma-input-buttons">SEARCH NOW</button>
+  </form>
+</div>
+<%- include('partials/footer.ejs') -%>

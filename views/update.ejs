@@ -1,47 +1,48 @@
 <%- include('partials/header.ejs') -%>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="generator" content="Hugo 0.83.1">
 <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
 <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-<link href="form-validation.css" rel="stylesheet">
+<!-- <link href="styles.css" rel="stylesheet"> -->
 
 
 <div class="container form-full">
   <main>
     <div class="g-5">
       <div class="form-box">
-        <h4 class="mb-3">Donor Registration</h4>
+        <h4 class="mb-3">Donor Update</h4>
         <hr class="my-4">
-        <form class="needs-validation"  method="POST">
+        <form class="needs-validation" action="/update/<%=updata[0]._id%>" method="POST">
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">First name</label>
-              <input type="text" class="form-control" id="firstName" name="firstName"  required autocomplete="off">
+              <input type="text" class="form-control" id="firstName" name="firstName" value="<%=updata[0].firstName%>" required autocomplete="off">
               <div class="invalid-feedback">
                 Valid first name is required.
               </div>
             </div>
             <div class="col-sm-6">
               <label for="lastName" class="form-label">Last name</label>
-              <input type="text" class="form-control" id="lastName"  name="lastName" required autocomplete="off">
+              <input type="text" class="form-control" id="lastName"  name="lastName" value="<%=updata[0].lastName%>" required autocomplete="off">
               <div class="invalid-feedback">
                 Valid last name is required.
               </div>
             </div>
             <div class="col-md-6">
               <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required autocomplete="off">
+              <input type="email" class="form-control" id="email" name="email" value="<%=updata[0].email%>" placeholder="you@example.com" required autocomplete="off">
               <div class="invalid-feedback">
                 Please enter a valid email address.
               </div>
             </div>
             <div class="col-md-6">
               <label for="gender" class="form-label">Gender</label>
-              <select class="form-select" id="gender" name="gender"  required autocomplete="off">
-                <option value="none" selected disabled hidden>
-                          Select an Option
+              <select class="form-select" id="gender" name="gender" value="<%=updata[0].gender%>" required autocomplete="off">
+                <option value="<%=updata[0].gender%>" selected  hidden>
+                          <%=updata[0].gender%>
                       </option>
                 <option>Male</option>
                 <option>Female</option>
@@ -53,7 +54,7 @@
             </div>
             <div class="col-md-6">
               <label for="Age" class="form-label">Age</label>
-            <input type="Age" class="form-control" id="Age" name="age" pattern="1[89]|[2-5][0-9]|6[0-5]" placeholder="18" required autocomplete="off">
+            <input type="Age" class="form-control" id="Age" name="age" value="<%=updata[0].age%>" pattern="1[89]|[2-5][0-9]|6[0-5]" placeholder="18" required autocomplete="off">
             <small class="text-muted">between 18 and 65</small>
               <div class="invalid-feedback">
                 Please enter your correct Age.
@@ -61,33 +62,33 @@
             </div>
             <div class="col-md-6">
               <label for="covid-recovery-date" class="form-label">Covid Recovery Date</label>
-              <input type="date" class="form-control" id="covid-recovery-date" name="covidDate" placeholder="18" required autocomplete="off">
+              <input type="date" class="form-control" id="covid-recovery-date" value="<%=updata[0].covidDate%>"  name="covidDate" required autocomplete="off">
               <div class="invalid-feedback">
                 Please enter correct Date.
               </div>
             </div>
             <div class="col-md-6">
               <label for="mobilenumber" class="form-label">Mobile number</label>
-              <input type="PhoneNo" class="form-control" id="mobilenumber" name="mobile" pattern="[6789][0-9]{9}" placeholder="Mobile number" required autocomplete="off">
+              <input type="PhoneNo" class="form-control" id="mobilenumber" name="mobile" value="<%=updata[0].mobileNumber%>" pattern="[6789][0-9]{9}" placeholder="Mobile number" required autocomplete="off">
               <div class="invalid-feedback">
                 Phone number required.
               </div>
             </div>
             <div class="col-md-6">
               <label for="blood-group" class="form-label">Blood Group</label>
-              <select class="form-select" id="blood-group" name="bloodGroup"  required autocomplete="off">
-                <option value="none" selected disabled hidden>
-                          Select an Option
+              <select class="form-select" id="blood-group" name="bloodGroup" value="<%=updata[0].bloodGroup%>" required autocomplete="off">
+                <option value="<%=updata[0].bloodGroup%>" selected hidden>
+                        <%=updata[0].bloodGroup%>
                 </option>
-                <option>A+</option>
-                <option>A-</option>
-                <option>B+</option>
-                <option>B-</option>
-                <option>O+</option>
-                <option>O-</option>
-                <option>AB+</option>
-                <option>AB-</option>
-                <option>Dont know</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="Dont know">Dont know</option>
               </select>
               <div class="invalid-feedback">
                 Please provide a valid blood group.
@@ -95,16 +96,16 @@
             </div>
             <div class="col-md-6">
               <label for="City" class="form-label">City</label>
-              <input type="text" class="form-control" id="city" name="city" placeholder="City" required autocomplete="off">
+              <input type="text" class="form-control" id="city" name="city" value="<%=updata[0].city%>" placeholder="City" required autocomplete="off">
               <div class="invalid-feedback">
                 City required.
               </div>
             </div>
             <div class="col-md-6">
               <label for="state" class="form-label">State</label>
-              <select class="form-select" id="state" name="state" required autocomplete="off">
-                <option value="none" selected disabled hidden>
-                          Select an Option
+              <select class="form-select" id="state" name="state" value="<%=updata[0].state%>" required autocomplete="off">
+                <option value="<%=updata[0].state%>" selected  hidden>
+                          <%=updata[0].state%>
                       </option>
                 <%  for(let i=0; i<stateArray.length; i++){ %>
                     <option value="<%=stateArray[i]%>"><%=stateArray[i]%></option>
@@ -115,7 +116,7 @@
               </div>
             </div>
           </div>
-          <button class="w-100 btn btn-lg plasmaRegistrationSubmitButton" type="submit">Register</button>
+          <button class="w-100 btn btn-lg plasmaRegistrationSubmitButton" type="submit">Update</button>
         </form>
       </div>
     </div>
@@ -124,7 +125,7 @@
 
 
 <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
-<script src="form-validation.js"></script>
+<!-- <script src="form-validation.js"></script> -->
 
 
 

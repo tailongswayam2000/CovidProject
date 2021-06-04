@@ -1,0 +1,64 @@
+<%- include('partials/header.ejs') -%>
+
+<%if( screen==="success"){ %>
+<div class="output-success output">
+  <h1 class="output-heading">Success !!</h1>
+  <p>You have been successfully registered as a donor.</p>
+</div>
+<div class="tips-div">
+  <p class="message">Wohoo ! We are proud of you for fulfilling your duty as a responsible citizen of the country.</p>
+  <div class="tips-box">
+
+  <p class="tips">Follow these <strong>tips</strong> for a great plasma donation experience :</p>
+  <ul class="tips-list">
+    <li class="tips">Stay well hydrated before your plasma donation. </li>
+    <li class="tips">Have a nutritious meal within a couple of hours before your visit.</li>
+    <li class="tips">Keep away from high-fat or high-cholesterol foods.</li>
+    <li class="tips">No usage of tobacco and no smoking before an hour of donation.</li>
+    <li class="tips">Avoid intake of alcohol and caffeine before and on your plasma donation day</li>
+    <li class="tips">Avoid demanding exercise atleast an hour before donation</li>
+    <li class="tips">Sleep well the night before you donate.</li>
+  </ul>
+  </div>
+</div>
+<h1 class="message ocard-heading">Here's your information we just saved.</h1>
+<div class="ocard row">
+  <div class="col-lg-12 row">
+    <div class="col-lg-3 ocard-field">Name:</div><div class="card-data col-lg-9"> <%=updata[0].firstName+" "+updata[0].lastName%></div>
+  </div>
+  <div class="col-lg-12 row">
+    <div class="col-lg-3 ocard-field">City:</div><div class="card-data col-lg-9"> <%=updata[0].city%></div>
+  </div>
+  <div class="col-lg-12 row">
+    <div class="col-lg-3 ocard-field">State:</div><div class="card-data col-lg-9"> <%=updata[0].state%></div>
+  </div>
+  <div class="col-lg-12 row">
+    <div class="col-lg-3 ocard-field">Contact number:</div><div class="card-data col-lg-9"> <%=updata[0].mobileNumber%></div>
+  </div>
+  <div class="col-lg-12 row">
+    <div class="col-lg-3 ocard-field">Email:</div><div class="card-data col-lg-9"> <%=updata[0].email%></div>
+  </div>
+  <div class="col-lg-12 row">
+    <div class="col-lg-3 ocard-field">Age:</div><div class="card-data col-lg-9"> <%=updata[0].age%></div>
+  </div>
+  <div class="col-lg-12 row">
+    <div class="col-lg-3 ocard-field">Blood group:</div><div class="card-data col-lg-9"> <%=updata[0].bloodGroup%></div>
+  </div>
+  <div class="col-lg-12 row">
+    <div class="col-lg-3 ocard-field">Gender:</div><div class="card-data col-lg-9"> <%=updata[0].gender%></div>
+  </div>
+</div>
+<form action="/update/<%=updata[0]._id%>" method="GET" class="update-btn-div">
+  <button type="submit" name="button" class="btn btn-lg btn-primary update-btn">Update Info</button>
+</form>
+<%}else{ %>
+
+<div class="output-failure output">
+  <h1 class="output-heading">Failure !!</h1>
+  <p>Sorry, we were unable to register you as a donor. Please try again.</p>
+  <form class="" action="/plasmaRegistration" method="GET">
+    <button class="btn btn-lg btn-danger failure-btn" type="submit" name="button">Try Again</button>
+  </form>
+</div>
+<%} %>
+<%- include('partials/footer.ejs') -%>
